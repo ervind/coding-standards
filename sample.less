@@ -1,1 +1,76 @@
 // Sample LESS file
+
+
+// Generally we follow the rules for CSS
+// For nested rules, here are some samples
+// Leave an empty line between inner selectors
+#content {
+	p {
+		color: #000;
+	}
+
+	ul {
+		border-width: 2px;
+	}
+}
+
+
+// If the main element has some own rules and it has child elements, leave a line between them
+#content {
+	text-align: center;
+	padding: 10px;
+
+	p {
+		color: #000;
+	}
+
+	ul {
+		border-width: 2px;
+	}
+}
+
+
+// Try to avoid deep nesting. Instead of this:
+#content {
+	text-align: center;
+
+	p {
+		a {
+			span {
+				color: #000;
+			}
+		}
+	}
+}
+// ... use this format (if P and A doesn't have any own rules):
+#content {
+	text-align: center;
+
+	p a span {
+		color: #000;
+	}
+}
+
+
+// Mixins
+// Before the mixin always put a line of comment explaining what the mixin does
+// If the mixin contains another mixin, leave a line before and after calling it. Otherwise the rules are just like the general rules
+.tpl-button-full( @width: 180px; @fWeight: 300; @bgcolor: @acolor; @color: #fff ) {
+
+	.tpl-button( @width, @fWeight );
+
+	background-color: @bgcolor;
+	color: @color;
+	border: 2px solid @bgcolor;
+
+	&:hover {
+		opacity: 0.7;
+	}
+}
+
+
+// OK, here is a simple mixin, too
+// Pay attention to the spaces around the parameters
+.tpl-button-full( @bgcolor: #fff ) {
+	background-color: @bgcolor;
+}
