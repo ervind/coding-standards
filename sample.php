@@ -14,6 +14,17 @@ $vari			= false;
 
 
 
+/* INDENTION */
+
+// Child lines are always indented by 1 tab. 1 tab is 4 characters wide. It applies to all other language files, too.
+if ( $foo == true ) {
+	do_this();		// Has a tab character at the beginning of the line
+	$bar = array(
+		"prop"	=> 'Hello Word!',		// another tab deeper
+	);
+}
+
+
 /* FUNCTIONS */
 
 
