@@ -129,6 +129,16 @@ else {
 }
 
 
+// The formatting when there are lot of conditions added to the IF syntax. In this case the conditions can be broken into more lines, starting with the logic symbols
+if ( $variable == true
+	|| ( $var2 == 1 && $var3 == false )
+	|| ( in_array( $var4, $array ) ) ) {
+
+	do_this();
+
+}
+
+
 // The other syntax can be used in WordPress loops, but if possible, nowhere else please
 if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
