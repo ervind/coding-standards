@@ -8,9 +8,9 @@ $variable = 14;
 
 // Adding several variables in a bunch
 // The right part of the definition is shifted to the longest variable name's tab
-$variable		= 14;
+$variable	= 14;
 $variable_too	= 'xyz';
-$vari			= false;
+$vari		= false;
 
 
 
@@ -19,9 +19,9 @@ $vari			= false;
 // Child lines are always indented by 1 tab. 1 tab is 4 characters wide. It applies to all other language files, too.
 if ( $foo == true ) {
 	do_this();		// Has a tab character at the beginning of the line
-	$bar = array(
+	$bar = [
 		"prop"	=> 'Hello Word!',		// another tab deeper
-	);
+	];
 }
 
 
@@ -71,31 +71,31 @@ $variable = other_function_name( 'hello' );
 
 
 // Array without values
-$array_name = array();
+$array_name = [];
 
 
 // Associative Array with values
 // On the left side there are double quotes (""), while on the right side single quotes ('')
 // Between the name and the value are TABs. The rules are the same as for simple variables
 // After the last line there is a comma (,). This way the lines are easier to be moved up or down
-$array_name = array(
-	"value"			=> 'Something',
+$array_name = [
+	"value"		=> 'Something',
 	"other_value"	=> 'Something else',
 	"numeric_value"	=> 456,
-);
+];
 
 
 // Multi-level array
 // Please note that the arrow goes 1 TAB right even if the param name on the left is shorter.
-$array_name = array(
-	"value"			=> 'Something',
+$array_name = [
+	"value"		=> 'Something',
 	"other_value"	=> 'Something else',
 	"numeric_value"	=> 456,
-	"inner_array"	=> array(
+	"inner_array"	=> [
 		"value"			=> 'Hello',
 		"other"			=> 'World',
-	),
-);
+	],
+];
 
 
 
@@ -130,9 +130,11 @@ else {
 
 
 // The formatting when there are lot of conditions added to the IF syntax. In this case the conditions can be broken into more lines, starting with the logic symbols
-if ( $variable == true
+if ( 
+	$variable == true
 	|| ( $var2 == 1 && $var3 == false )
-	|| ( in_array( $var4, $array ) ) ) {
+	|| ( in_array( $var4, $array ) ) 
+) {
 
 	do_this();
 
@@ -215,14 +217,12 @@ $string	= sprintf(
 // 2 empty lines after the class name AND before its closing
 class Class_Name {
 
-
 	// Variables are just like normally. There are tabs after the public / protected / private definition and the variable name, too
 	protected	$variable		= false;
 	public		$another_var	= "value";
 
 
-
-	// 3 empty lines between the variables and the methods
+	// 2 empty lines between the variables and the methods
 	public function __construct( $args ) {
 
 		do_something();
